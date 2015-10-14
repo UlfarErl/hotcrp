@@ -852,20 +852,20 @@ if ($newProfile) {
 
     echo '<div>', Ht::submit("bulkregister", "Save accounts"), '</div>';
 
-    echo "<p>Enter or upload CSV data for new users, including a header to explain your format. For example:</p>\n",
+    echo "<p>Enter or upload CSV data for new users, including a header to explain your format. Some fields are required, and email cannot be the first field. For example:</p>\n",
         '<pre class="entryexample">
-name,email,affiliation,roles
-John Adams,john@earbox.org,UC Berkeley,pc
-"Adams, John Quincy",quincy@whitehouse.gov
+name,first,last,email,affiliation,roles
+John Adams,John,Adams,john@earbox.org,UC Berkeley,pc
+"Adams, John Quincy",John,Adams,quincy@whitehouse.gov
 </pre>', "\n",
         '<p>Or just enter an email address per line.</p>',
         '<p>Supported CSV fields include:</p><table>',
         '<tr><td class="lmcaption"><code>name</code></td>',
-          '<td>User name</td></tr>',
+          '<td>User name (required)</td></tr>',
         '<tr><td class="lmcaption"><code>first</code></td>',
-          '<td>First name</td></tr>',
+          '<td>First name (required)</td></tr>',
         '<tr><td class="lmcaption"><code>last</code></td>',
-          '<td>Last name</td></tr>',
+          '<td>Last name (required)</td></tr>',
         '<tr><td class="lmcaption"><code>affiliation</code></td>',
           '<td>Affiliation</td></tr>',
         '<tr><td class="lmcaption"><code>roles</code></td>',
